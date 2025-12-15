@@ -1,0 +1,131 @@
+/* Reset default browser styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+
+/* Header styling */
+header {
+    background-color: rgb(29, 112, 255); /* Blue background */
+    text-align: center; /* Center align text */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Font stack */
+    padding: 10px; /* Space inside header */
+}
+
+/* Input field for food */
+#input-food {
+    outline: none; /* Removes default outline */
+    border-radius: 5px; /* Rounded corners */
+    height: 25px; /* Fixed height */
+    border: none; /* No border */
+    width: 400px; /* Fixed width */
+}
+
+/* Button styling for input */
+.input-button {
+    background-color: rgb(29, 112, 255); /* Blue background */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    width: 60px; /* Fixed width */
+    height: 25px; /* Fixed height */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Font stack */
+    color: #fff; /* White text */
+    font-size: large; /* Larger font size */
+}
+
+/* Resync button styling */
+#resyncbtn {
+    margin: 20px auto; /* Centered with margin */
+    border: none; /* No border */
+    background-color: rgb(69, 132, 249); /* Slightly lighter blue */
+    color: #fff; /* White text */
+    font-family: Arial, Helvetica, sans-serif; /* Font stack */
+    font-size: large; /* Larger font size */
+    border-radius: 3px; /* Rounded corners */
+    padding: 5px; /* Inner spacing */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Button container */
+.btn-div {
+    display: flex; /* Flexbox layout */
+}
+
+/* Input button margin */
+#input-btn {
+    margin-left: 10px; /* Space on the left */
+}
+
+/* Input container styling */
+.input-container {
+    display: flex; /* Flexbox layout */
+    margin: 10px auto; /* Centered with margin */
+    background-color: rgb(216, 227, 236); /* Light gray background */
+    width: 60%; /* Responsive width */
+    height: auto; /* Flexible height */
+    padding: 20px; /* Inner spacing */
+    border-radius: 5px; /* Rounded corners */
+    justify-content: center; /* Center content */
+    box-sizing: border-box; /* Include padding/border in size */
+}
+
+/* List container */
+.lists {
+    background-color: rgb(216, 227, 236); /* Light gray background */
+    margin: 10px auto; /* Centered with margin */
+    width: 50%; /* Responsive width */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Food list container */
+.food-container {
+    list-style: none; /* Remove bullets */
+    font-family: Arial, Helvetica, sans-serif; /* Font stack */
+    border-radius: 2px; /* Rounded corners */
+    padding: 5px; /* Inner spacing */
+}
+
+/* Individual food item */
+.food-item {
+    border: 1px solid rgb(255, 255, 255); /* White border */
+    border-radius: 3px; /* Rounded corners */
+    margin: 4px; /* Space around items */
+    padding: 3px; /* Inner spacing */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Font stack */
+    color: rgb(125, 141, 170); /* Grayish text color */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between elements */
+}
+
+/* Alert box styling */
+.alert {
+    background-color: rgb(36, 177, 36); /* Green background */
+    width: 60%; /* Responsive width */
+    margin: 10px auto; /* Centered with margin */
+    height: 40px; /* Fixed height */
+    font-family: Arial, Helvetica, sans-serif; /* Font stack */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center content */
+    padding: 5px; /* Inner spacing */
+    border-radius: 4px; /* Rounded corners */
+    justify-content: space-between; /* Space between elements */
+}
+
+/* Button inside alert */
+.alert button {
+    background-color: transparent; /* No background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    margin-right: 10px; /* Space on right */
+    font-size: medium; /* Medium font size */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Font Awesome icons */
+.fa {
+    cursor: pointer; /* Pointer on hover */
+}
