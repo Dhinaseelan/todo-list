@@ -1,15 +1,11 @@
 //-----------------------------------------------------
 // Getting elements
 //-----------------------------------------------------
-const inputtab = document.getElementById("input-food");
+let inputtab = document.getElementById("input-food");
 const inputbtn = document.getElementById("input-btn");
 const res = document.getElementById("response");
 let foodcontainer = document.getElementById("food-container");
-
-//-----------------------------------------------------
-// Add new food item when button is clicked
-//-----------------------------------------------------
-inputbtn.addEventListener("click", () => {
+let addeventhandler= () => {
     //--------------------------------------------------
     // Creating new elements
     //--------------------------------------------------
@@ -33,6 +29,8 @@ inputbtn.addEventListener("click", () => {
 
     // Add onclick event for remove functionality
     divremove.parentElement.setAttribute("onclick", "removeitem(event)");
+    
+    console.log(`what this ${divremove.parentElement}`);
 
     //--------------------------------------------------
     // Duplicate list functionality
@@ -56,7 +54,24 @@ inputbtn.addEventListener("click", () => {
         list.append(clonedDataTrue);
         duplicateEl.append(list);
     });
-});
+}
+//-----------------------------------------------------
+// Add new food item when button is clicked
+//-----------------------------------------------------
+//-----------------------------------------------------
+inputbtn.addEventListener("click",addeventhandler);
+//enble keyboard event you can adding list item by clicking enter key
+//adding undo option 
+//-----------------------------------------------------
+document.addEventListener("keyup",(event)=>{
+    if(event.key=="Enter"){
+        addeventhandler();
+    }
+    else if(event.key=="KeyZ" && (event.ctrlKey||event.metaKey)){
+        inputtab.textContent=""
+    }
+}
+)
 
 //-----------------------------------------------------
 // Removing list item
