@@ -1,42 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="style.css">
-<body>
-    <header>
-        <h1>🍔 FoodCook Planner</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <header>
+            <h1>🍔 FoodCook Planner</h1>
     </header>
     <main id="main1">
-        <div class="alert">
-            <div class="alert-message">
-                <strong>✅ successful !</strong> Food is updated !
-            </div>
-            <button type="button">X</button>
-        </div>
+        
         <div class="input-container">
             <input type="text" id="input-food" text="text" placeholder="I like to eat...">
             <button class="input-button" id="input-btn">Add</button>
             <!-- <button class="input-button" onclick="replacefun()" id="input-btn">replace</button> -->
             <!-- <button class="input-button" id="input-btn">replace</button> draft-->
         </div>
-       <div class="lists">
+        <section>
+            <div class="lists">
             <ul class="food-container" id="food-container">
-                <li class="food-item"><div>sambar</div><div onclick="removeitem(event)"><i class="fa fa-xmark"></i></div></li>
-                <li class="food-item"><div>rasam</div><div onclick="removeitem(event)"><i class="fa fa-xmark"></i></div></li>
-                <li class="food-item"><div>curd</div><div onclick="removeitem(event)"><i class="fa fa-xmark"></i></div></li>
+                
             </ul>
         </div>
+         <div id="no-list">
+            <img src="image/A black-and-white il.png" alt="not found">
+            <h6>create your food items</h6>
+        </div>
+        </section>
+       
         <div class="btn-div">
         <button id="resyncbtn">resync</button>
         </div>
         <div id="duplicate">
 
         </div>
+       
     </main>
     <script src="script.js"></script>
 </body>
