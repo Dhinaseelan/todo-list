@@ -9,7 +9,36 @@ const notifi=document.querySelector(".alert");
 const notifix=document.querySelector(".notifix1")
 const main=document.getElementById("main1");
 const no_list=document.getElementById("no-list");
+///
+  document.addEventListener("DOMContentLoaded",()=>{
+          const fetchfoodItems= [...JSON.parse(localStorage.getItem("foodItems"))];
+          fetchfoodItems.forEach((item)=>{
+                const li = document.createElement("li");          // List item
+    const divitem = document.createElement("div");    // Div for food text
+    const divremove = document.createElement("div");  // Div for remove icon
+
+    // Add remove icon inside div
+    divremove.innerHTML = `<i class="fa fa-xmark"></i>`;
+
+    // Assign class to list item
+    li.className = "food-item";
+
+    // Set text content from input field
+    divitem.textContent =item.foodItem ;
+
+    // Append new elements to container
+    foodcontainer.append(li);
+    li.append(divitem);
+    li.append(divremove);
+     divremove.parentElement.setAttribute("onclick", "removeitem(event)");
+    // Add onclick event for remove functionality
+          
+            console.log(item.foodItem)
+          })
+          refreshUI();
+    })
 let addeventhandler= () => {
+  
     //--------------------------------------------------
     // Creating new elements
     //--------------------------------------------------
@@ -42,7 +71,7 @@ let addeventhandler= () => {
     li.append(divremove);
     main.prepend(divalart);
     //-----------------------------notification----------------------------------//
-    setTimeout(()=>{divalart.remove()},2000)
+    setTimeout(()=>{divalart.remove()},2000);
 
     // Add onclick event for remove functionality
     divremove.parentElement.setAttribute("onclick", "removeitem(event)");
@@ -71,11 +100,12 @@ let addeventhandler= () => {
         list.append(clonedDataTrue);
         duplicateEl.append(list);
     });
+    localStorage.setItem("foodItems",JSON.stringify([...JSON.parse(localStorage.getItem("foodItems")||"[]"),{foodItem:inputtab.value}]))
     refreshUI();
 }
 //-----------------------------------------------------
 // Add new food item when button is clicked
-//-----------------------------------------------------]-----+-++
+//-----------------------------------------------------
 //-----------------------------------------------------
 inputbtn.addEventListener("click",addeventhandler);
 //enble keyboard event you can adding list item by clicking enter key
@@ -99,9 +129,17 @@ function removeitem(event) {
 
     // Get the existing list item
     let existinglist = event.target.parentNode.parentNode;
-
+    console.log(existinglist.innerText)
     // Remove the list item from its parent
     existinglist.parentNode.removeChild(existinglist);
+    //remove from local storage
+    const fetchfoodItems= [...JSON.parse(localStorage.getItem("foodItems"))];
+    fetchfoodItems.forEach((item)=>{
+        if(item.foodItem===existinglist.innerText){
+            fetchfoodItems.splice(fetchfoodItems.indexOf(item),1)
+        }
+    })
+    localStorage.setItem("foodItems",JSON.stringify(fetchfoodItems))
     refreshUI();
 }
 main.addEventListener("click", (e) => {
