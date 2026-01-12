@@ -82,7 +82,7 @@ header {
 
 /* Food list container */
 .food-container {
-    
+    background-color: #fff;
     list-style: none; /* Remove bullets */
     font-family: Arial, Helvetica, sans-serif; /* Font stack */
     border-radius: 2px; /* Rounded corners */
@@ -91,7 +91,8 @@ header {
 
 /* Individual food item */
 .food-item {
-    border: 1px solid rgb(255, 255, 255); /* White border */
+    background-color: #D2FAFB;
+    border: 1px solid rgb(71, 69, 69); /* White border */
     border-radius: 3px; /* Rounded corners */
     margin: 4px; /* Space around items */
     padding: 3px; /* Inner spacing */
@@ -152,6 +153,6 @@ section{
 
 }
 #no-list img{
-    width: 240px;
-    opacity: 0.5;
+    width: 460px;
+    opacity: 0.4;
 }
